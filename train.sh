@@ -1,9 +1,10 @@
-#!/bin/bash 
-#SBATCH -J VAD_Training
+#!/usr/bin/bash
+
+#SBATCH -J CAVAD
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-gpu=8
-#SBATCH --mem-per-gpu=32G
-#SBATCH -p batch
+#SBATCH --mem-per-gpu=29G
+#SBATCH -p batch_ugrad
 #SBATCH -t 1-0
 #SBATCH -o logs/slurm-%A.out
 
@@ -21,7 +22,7 @@ VISUAL_BACKBONE="ViT16B"
 TEXT_BACKBONE="ViT16B"
 
 # RESULT_FOLDER: 
-RESULT_FOLDER="result"
+RESULT_FOLDER="result2"
 
 # SAVE_MODEL: 저장하려면 "--save_model", 저장하지 않으려면 빈 문자열 ""
 SAVE_MODEL=""

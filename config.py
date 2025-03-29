@@ -17,15 +17,17 @@ parser.add_argument("--text_root", default=os.path.join(base_path, "textual"))
 parser.add_argument("--train_list", default=os.path.join(base_path, "list/Anomaly_Train.txt"), type=str)
 parser.add_argument('--test-list-path', default=os.path.join(base_path, "list/Temporal_Anomaly_Annotation_fix.txt"), type=str)
 parser.add_argument('--gt-feature-path', default=os.path.join(base_path, "list/TestGT_padding.npy"), type=str)
+parser.add_argument('--category-gt-feature-path', default=os.path.join(base_path, "list/Category_GT/padding/"), type=str)
+parser.add_argument('--category-test-list-path', default=os.path.join(base_path, "list/Category_test_list/"), type=str)
 
 
 # 🔢 Hyperparameter 설정
-parser.add_argument("--batch_size", type=int, default=16, help="Batch size for training")
-parser.add_argument("--lr", type=float, default=3e-4, help="Learning rate")
-parser.add_argument("--max_epoch", type=int, default=30, help="Max training epochs")
-parser.add_argument("--lambda_contrastive", type=float, default=0.07, help="Contrastive loss weight")
+parser.add_argument("--batch_size", type=int, default=64, help="Batch size for training")
+parser.add_argument("--lr", type=float, default=0.0005, help="Learning rate")
+parser.add_argument("--max_epoch", type=int, default=1, help="Max training epochs")
+parser.add_argument("--lambda_contrastive", type=float, default=0, help="Contrastive loss weight")
 parser.add_argument('--fusion-type', type=str, default='concat', choices=['concat', 'cross_attention', 'linear',])
-parser.add_argument('--num-segments-per-video', default=256, type=int)
+parser.add_argument('--num-segments-per-video', default=128, type=int)
 parser.add_argument('--proj-embedding', default=512, type=int)
 
 
