@@ -22,10 +22,10 @@ VISUAL_BACKBONE="ViT16B"
 TEXT_BACKBONE="ViT16B"
 
 # RESULT_FOLDER: 
-RESULT_FOLDER="result2"
+RESULT_FOLDER="result1"
 
 # SAVE_MODEL: 저장하려면 "--save_model", 저장하지 않으려면 빈 문자열 ""
-SAVE_MODEL=""
+SAVE_MODEL="--save_model"
 
 
 

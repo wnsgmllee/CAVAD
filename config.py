@@ -22,13 +22,14 @@ parser.add_argument('--category-test-list-path', default=os.path.join(base_path,
 
 
 # 🔢 Hyperparameter 설정
-parser.add_argument("--batch_size", type=int, default=64, help="Batch size for training")
+parser.add_argument("--batch_size", type=int, default=32, help="Batch size for training")
 parser.add_argument("--lr", type=float, default=0.0005, help="Learning rate")
-parser.add_argument("--max_epoch", type=int, default=1, help="Max training epochs")
+parser.add_argument("--max_epoch", type=int, default=5, help="Max training epochs")
 parser.add_argument("--lambda_contrastive", type=float, default=0, help="Contrastive loss weight")
 parser.add_argument('--fusion-type', type=str, default='concat', choices=['concat', 'cross_attention', 'linear',])
-parser.add_argument('--num-segments-per-video', default=128, type=int)
+parser.add_argument('--num-segments-per-video', default=256, type=int)
 parser.add_argument('--proj-embedding', default=512, type=int)
+parser.add_argument("--random_seed", type=int, default=42, help="Random seed for reproducibility")
 
 
 # 🔬 Backbones

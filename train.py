@@ -10,6 +10,12 @@ from config import args
 from utils import save_model
 from validate import validate, validate_and_plot
 import glob
+import random 
+
+random.seed(args.random_seed)
+np.random.seed(args.random_seed)
+torch.manual_seed(args.random_seed)
+torch.cuda.manual_seed_all(args.random_seed)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -149,6 +155,7 @@ def train():
 
     if args.save_model:
         validate_and_plot(model)
+
 
 if __name__ == "__main__":
     train()
