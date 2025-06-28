@@ -1,0 +1,17 @@
+{
+  "batch_size": [32, 64],
+  "lr": [0.001, 0.0028],
+  "max_epoch": [15],
+  "lambda_1": [0.0005, 0.0007],
+  "lambda_2": [0.004, 0.006],
+  "num_segments_per_video": [54],
+  "proj_embedding": [772],
+  "topk": [5],
+  "lambda_category": [0.2],
+  "d_emb": [48],
+  "weight_decay": [1e-5],
+  "fold_div": [2],
+  "model": ["CAM_GATSM"],
+  "visual_backbone": ["ViT16B"],
+  "text_backbone": ["ViT16B"]
+}
